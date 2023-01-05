@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Vincent</a>
+            </div>
+            <div class="main_list" id="mainListDiv">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">my work</a></li>
+                    <li><a href="#">disegn</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+            <div class="media_button">
+                <button class="main_media_button" id="mediaButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!--- Hero Section --->
+<section class="main">
+    <h1 class="hello">HELLO</h1>
+    <div class="typewrite">
+        <h1>
+            <a class="typewrite" data-period="2000" data-type='[ "Hi, Im Vincent.", "I am Web Developer.", "I Love Design.", "I Love to Develop.", "I Like You <3." ]'>
+              <span class="wrap"></span>
+            </a>
+        </h1>
+    </div>
+
+    <div class="backimg">
+        <img src="./images/muka.png" alt="">
+    </div>
+</section>
+
+<div class="about-me" id="about">
+    <img src="./images/Killua-2011.png" alt="">
+    <div class="info">
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci mauris, porttitor at massa eu, laoreet efficitur dui. Mauris leo quam, condimentum rhoncus odio at, rutrum vestibulum orci. Suspendisse placerat consectetur orci non luctus. Nullam libero augue, dictum id sollicitudin at, egestas in nibh. Vestibulum sollicitudin justo eleifend sagittis vehicula. Vivamus mauris orci, fringilla a porta id, rhoncus sed sapien. Maecenas eu pharetra ipsum. Quisque ut molestie leo. Integer auctor orci eget dapibus vulputate. Sed sit amet mollis nisl.</p>
+    <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+    </div>
+    <div class="tab-contents active-tabs" id="skills">
+        <ul>
+            <li><span>Sheesh</span><br>Luremn Sheesh</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+            <li><span>Sheesh</span><br>Luremn Sheesh</li>
+            <li><span>Sheesh</span><br>Luremn Sheesh</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="education">
+        <ul>
+            <li><span>Sheesh</span><br>Luremn Sheesh</li>
+            <li><span>Sheesh</span><br>Luremn Sheesh</li>
+            <li><span>Sheesh</span><br>Luremn Sheesh</li>
+        </ul>
+    </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
