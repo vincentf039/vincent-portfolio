@@ -225,6 +225,37 @@ h1.hello {
     100% { opacity: 1; }
   }
 
+/*Stick Icons*/
+
+.icons{
+    position: fixed;
+    top: 50%;
+    right: -15vw;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+.icons .fab{
+    color: black;
+    width: 20vw;
+    padding: 1vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+    background: rgb(118 118 120 / 80%);
+    transition: 0.5s ease;
+}
+.icons .fab:hover{
+    color: #ff004f;
+    transform: translateX(-8vw);
+}
+.icons .fab span{
+    color: black;
+    position: relative;
+    font-size: 1.8vw;
+    bottom: 0.3vw;
+    margin-left: 1.8vw;
+}
+
+ /*About Me*/ 
 .about-me {
     display: flex;
     flex-direction: row;
@@ -606,5 +637,32 @@ span#msg{
     }
     .services-list{
         padding: 10px;
+    }
+    .icons{
+        position: fixed;
+        top: 50%;
+        right: -15vw;
+        transform: translateY(-50%);
+        z-index: 1000;
+    }
+    .icons .fab{
+        color: black;
+        width: 20vw;
+        padding: 1vw;
+        font-size: 2.5vw;
+        cursor: pointer;
+        background: rgb(118 118 120 / 80%);
+        transition: 0.5s ease;
+    }
+    .icons .fab:hover{
+        color: #ff004f;
+        transform: translateX(-8vw);
+    }
+    .icons .fab span{
+        color: black;
+        position: relative;
+        font-size: 1.8vw;
+        bottom: 0.3vw;
+        margin-left: 1.8vw;
     }
 }
