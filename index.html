@@ -1,193 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <title>Portfolio Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio – Web Developer & UI/UX Designer</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f7f6f3;--card:#fff;--tx:#17181c;--mut:#62666f;--bd:#e3e1db;--ac:#3b5bdb;--ac2:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111317;--card:#1a1d23;--tx:#eceef2;--mut:#9aa0ab;--bd:#2a2e36;--ac:#7c9bff;--ac2:#ff9b5e}}
+:root[data-theme="dark"]{--bg:#111317;--card:#1a1d23;--tx:#eceef2;--mut:#9aa0ab;--bd:#2a2e36;--ac:#7c9bff;--ac2:#ff9b5e}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav b{font-weight:700;letter-spacing:-.02em}
+nav a{margin-left:18px;color:var(--mut);font-size:14px}
+nav a:hover{color:var(--tx)}
+.hero{padding:56px 0 40px}
+.hero small{color:var(--ac);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.08;letter-spacing:-.03em;margin:12px 0 16px;max-width:15em}
+.hero p{color:var(--mut);max-width:38em;font-size:18px;margin:0 0 24px}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;background:var(--tx);color:var(--bg);font-weight:600;font-size:15px}
+.btn.o{background:none;color:var(--tx);border:1px solid var(--bd);margin-left:8px}
+.stats{display:flex;gap:32px;flex-wrap:wrap;margin-top:36px}
+.stats div b{display:block;font-size:28px;letter-spacing:-.02em}
+.stats div span{color:var(--mut);font-size:13px}
+section{padding:40px 0}
+h2{font-size:26px;letter-spacing:-.02em;margin:0 0 6px}
+.sub{color:var(--mut);margin:0 0 20px}
+.tabs{display:flex;gap:8px;margin-bottom:20px}
+.tabs button{font:inherit;font-size:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--mut);cursor:pointer}
+.tabs button.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--ac)}
+.th{height:120px;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:700;color:#fff;letter-spacing:-.03em}
+.bd{padding:14px 16px 16px}
+.bd h3{margin:0;font-size:16px}
+.bd p{margin:4px 0 0;color:var(--mut);font-size:13px;word-break:break-all}
+.tag{display:inline-block;margin-top:10px;font-size:11px;padding:2px 9px;border-radius:99px;border:1px solid var(--bd);color:var(--mut)}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skills span{padding:7px 14px;border:1px solid var(--bd);border-radius:99px;background:var(--card);font-size:14px}
+footer{padding:48px 0 32px;color:var(--mut);font-size:14px;border-top:1px solid var(--bd);margin-top:32px}
+</style>
 </head>
 <body>
-    <nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="#">Vincent</a>
-            </div>
-            <div class="main_list" id="mainListDiv">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">my work</a></li>
-                    <li><a href="#services">disegn</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </div>
-            <div class="media_button">
-                <button class="main_media_button" id="mediaButton">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+<div class="wrap">
+<nav><b>Vincent O. Fernandez</b><div><a href="#work">Websites</a><a href="#design">UI/UX</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
 
-<!--- Hero Section --->
-<section class="main">
-    <h1 class="hello">HELLO</h1>
-    <div class="typewrite">
-        <h1>
-            <a class="typewrite" data-period="2000" data-type='[ "Hi, Im Vincent.", "I am Web Developer.", "I Love Design.", "I Love to Develop.", "I Like You <3." ]'>
-              <span class="wrap"></span>
-            </a>
-        </h1>
-    </div>
+<header class="hero">
+<small>Web Developer &amp; UI/UX Designer</small>
+<!-- <h1>I design and build websites that people actually enjoy using.</h1>
+<p>From WordPress builds to Figma concepts, here’s a selection of live websites and design work for clients in Australia, the Philippines and beyond.</p>
+<a class="btn" href="#work">View work</a><a class="btn o" href="#contact">Get in touch</a> -->
+<div class="stats"><div><b id="n1">12</b><span>Live websites</span></div><div><b id="n2">18</b><span>UI/UX designs</span></div><div><b>2</b><span>Disciplines</span></div></div>
+</header>
 
-    <div class="backimg">
-        <img src="./images/muka.png" alt="">
-    </div>
+<section id="work">
+<h2>Live websites</h2><p class="sub">Selected projects that are live on the web.</p>
+<div class="grid" id="sites"></div>
 </section>
 
-<!--- Sticky Social Icons---->
-<div class="icons">
-    <i class="fab fa-instagram"><span>Instagram</span></i><br>
-    <i class="fab fa-github"><span>Github</span></i><br>
-    <i class="fab fa-linkedin"><span>LinkedIn</span></i>
+<section id="design">
+<h2>UI/UX design</h2><p class="sub">Figma files: concepts, mockups and layouts.</p>
+<div class="grid" id="figma"></div>
+</section>
+
+<section id="about">
+<!-- <h2>About</h2> -->
+<!-- <p class="sub" style="max-width:40em">I take projects from first wireframe to launched site, covering layout, visual design and development. Replace this paragraph with your own story.</p> -->
+<div class="skills"><span>Figma</span><span>WordPress</span><span>HTML &amp; CSS</span><span>JavaScript</span><span>Responsive design</span><span>UI/UX</span></div>
+</section>
+
+<footer id="contact"><h2 style="color:var(--tx)">Let’s work together</h2>
+<p>vincentf039@email.com · Olongapo, Philippines</p>
+<p>© 2026 Vincent O. Fernandez</p></footer>
 </div>
-
-
-<div class="about-me">
-    <img src="./images/Killua-2011.png" alt="">
-    <div class="info" id="about">
-        <h1>About Me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci mauris, porttitor at massa eu, laoreet efficitur dui. Mauris leo quam, condimentum rhoncus odio at, rutrum vestibulum orci. Suspendisse placerat consectetur orci non luctus. Nullam libero augue, dictum id sollicitudin at, egestas in nibh. Vestibulum sollicitudin justo eleifend sagittis vehicula. Vivamus mauris orci, fringilla a porta id, rhoncus sed sapien. Maecenas eu pharetra ipsum. Quisque ut molestie leo. Integer auctor orci eget dapibus vulputate. Sed sit amet mollis nisl.</p>
-    <div class="tab-titles">
-        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-        <p class="tab-links" onclick="opentab('education')">Education</p>
-    </div>
-    <div class="tab-contents active-tabs" id="skills">
-        <ul>
-            <li><span>Dribble</span><br>Behind the back</li>
-            <li><span>Push Up</span><br>x10</li>
-            <li><span>Front End</span><br>Wordpress</li>
-        </ul>
-    </div>
-    <div class="tab-contents" id="experience">
-        <ul>
-            <li><span>Web Developer ( August 01, 2022 to Present ) </span><br>IFL Company ( Web Dev. )</li>
-            <li><span>OJT ( Feb-Apr 2022 ) </span><br>IFL Company ( Web Dev. )</li>
-            <li><span>Senior High Training ( February 2017 ) </span><br>Gladness Company ( Human Resources )</li>
-        </ul>
-    </div>
-    <div class="tab-contents" id="education">
-        <ul>
-            <li><span>College ( 2018-2022 )</span><br>St.Benilde Center for Global Competence Inc.<br>(Bachelor of Science in Information Technology)</li>
-            <li><span>Senior High Schools ( 2016-2018 )</span><br>St.Benilde Center for Global Competence Inc.<br>(Information Communication Technology)</li>
-            <li><span>High Schools( 2012-2016 )</span><br>Old Cabalan Intergrated School</li>
-            <li><span>Elementary ( 2006-2012 )</span><br>Sta. Rita Elementary Schools</li>
-        </ul>
-    </div>
-    </div>
-</div>
-
-<!---- Services Section ---->
-
-<div class="services" id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fas fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci mauris, porttitor at massa eu, laoreet efficitur dui. Mauris leo quam, condimentum rhoncus odio at, rutrum vestibulum orci. Suspendisse placerat consectetur orci non luctus. Nullam libero augue, dictum id sollicitudin at, egestas in nibh. Vestibulum sollicitudin justo eleifend sagittis vehicula. Vivamus mauris orci, fringilla a porta id, rhoncus sed sapien. Maecenas eu pharetra ipsum. Quisque ut molestie leo. Integer auctor orci eget dapibus vulputate. Sed sit amet mollis nisl.</p>
-                <a href="#">Learn more<<</a>
-            </div>
-            <div>
-                <i class="fas fa-crop-alt"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci mauris, porttitor at massa eu, laoreet efficitur dui. Mauris leo quam, condimentum rhoncus odio at, rutrum vestibulum orci. Suspendisse placerat consectetur orci non luctus. Nullam libero augue, dictum id sollicitudin at, egestas in nibh. Vestibulum sollicitudin justo eleifend sagittis vehicula. Vivamus mauris orci, fringilla a porta id, rhoncus sed sapien. Maecenas eu pharetra ipsum. Quisque ut molestie leo. Integer auctor orci eget dapibus vulputate. Sed sit amet mollis nisl.</p>
-                <a href="#">Learn more<<</a>
-            </div>
-            <div>
-                <i class="fas fa-app-store"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci mauris, porttitor at massa eu, laoreet efficitur dui. Mauris leo quam, condimentum rhoncus odio at, rutrum vestibulum orci. Suspendisse placerat consectetur orci non luctus. Nullam libero augue, dictum id sollicitudin at, egestas in nibh. Vestibulum sollicitudin justo eleifend sagittis vehicula. Vivamus mauris orci, fringilla a porta id, rhoncus sed sapien. Maecenas eu pharetra ipsum. Quisque ut molestie leo. Integer auctor orci eget dapibus vulputate. Sed sit amet mollis nisl.</p>
-                <a href="#">Learn more<<</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!---- My Work ---->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="./images/0_U9cHKQx1NrYOL6FT.png" alt="">
-                    <div class="layer">
-                        <h3>Wordpress</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./images/0_vvEF_3jfExI93QtS.png" alt="">
-                    <div class="layer">
-                        <h3>Website</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./images/photoshop.png" alt="">
-                    <div class="layer">
-                        <h3>Design Website</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!---- Contact ---->
-
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i>vincentf039@gmail.com</p>
-                <p><i class="fas fa-phone"></i>+63 912 8550 743</p>
-                <div class="social-icons">
-                    <a href=""><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
-                </div>
-                <a href="#" download class="btn btn2">Download My CV</a>
-            </div>
-            
-
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright @ Vincent. Made by Pure Heart and true fellings for you Iloveyou<i class="fas fa-heart"></i></p>
-        </div>
-    </div>
-</div>
-
-    <script src="script.js"></script>
+<script>
+var sites=[
+["ThinkCertified","https://thinkcertified.com/"],["Rodlocker Blog","https://blog.rodlocker.com/"],["Vative","https://vative.com.au/"],["Fiddle Contest","https://www.fiddlecontest.org/"],["My Condolences PH","https://mycondolences.ph/"],["CVPD","https://cvpd.com.au/"],["Basileia Discipleship","https://basileiadiscipleship.com.au/"],["Illawarra Flyers","https://illawarraflyers.com.au/"],["TechInstalls","https://techinstalls.io/"],["AF Techs","https://aftechs.com/"],["Infinite Event Services","https://infiniteeventservices.com/"],["Kaleafa","https://kaleafa.com/"]];
+var figma=[
+["Advanced Field Technicians","EDKeY2KbmJ5yh5TvmQOnpM/Advanced-Field-Technicians"],["Starlink Installation","3NIsCOFuETjlZYbTn9RYpc/Starlink-Installation"],["Anny Slegten","BtWjTxmHT7PGjiYMRVoSww/Anny-Slegten"],["Reiki Training","5g0LUHTzHZlUqV0OquyXZQ/Reiki-Training"],["Hypnosis Edmonton","zqRDmeLPskMCFKnJZ97bKP/Hypnosis-Edmonton"],["Slegtenian Hypnosis","flJpBLWX9aUCSQlRbmSr2K/Slegtenian-Hypnosis"],["Hypnotism Training Institute of Alberta","w6H8sfoisLJJzmxzLjhXBr/Hypnotism-Training-Institute-of-Alberta"],["New Asahi Subic","j3GC3cwWKByBqsTAHrbzgr/New-Asahi-Subic---Mockup"],["Somerville Primary","SNtf3fDesyDqt40mQSxNtn/240105-Somerville-Primary-Web-Concept"],["Plantation House","uKdP3xR1bOIih5FdxPRwKs/240228-Plantation-House"],["Boulevard","0GcbUnaEOMV4kqdbHC7ZXY/Boulevard"],["DevOps Layout","YFrlHJFEI0GWGkuPN7J1ZG/DevOps-Layout"],["Farewell Funeral","qXozF38Xh5nAK7hmcXS7tR/Farewell-Funeral"],["Torres Strait Kaziw Meta","voTUJRICLO18HkoSC0fKCn/Torres-Strait-Kaziw-Meta"],["Kithe","yKBLOwGxTpq5jVfyrBF4NW/240215-Kithe"],["Wheelspin","HHEhk2b6BYti3yNQ1MD17F/Mockup---Wheelspin--2-"],["Kingston Grange Bamboo","ZWkJqcAtmmoEKAcomG7wnu/Kingston-Grange-Bamboo--2-"],["Homepage","2Hz4CGXsYKQ3TharNDoJIW/Homepage"]];
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function card(t,u,tag,i){var h=(i*47+215)%360,ini=t.split(" ").slice(0,2).map(function(w){return w[0]}).join("").toUpperCase();
+return '<a class="card" href="'+u+'" target="_blank" rel="noopener"><div class="th" style="background:linear-gradient(135deg,hsl('+h+',60%,48%),hsl('+((h+40)%360)+',65%,38%))">'+ini+'</div><div class="bd"><h3>'+esc(t)+'</h3><p>'+esc(u.replace(/^https?:\/\/(www\.)?/,"").split("?")[0].replace(/\/$/,"")).slice(0,60)+'</p><span class="tag">'+tag+'</span></div></a>'}
+document.getElementById("sites").innerHTML=sites.map(function(s,i){return card(s[0],s[1],"Website",i)}).join("");
+document.getElementById("figma").innerHTML=figma.map(function(s,i){return card(s[0],"https://www.figma.com/design/"+s[1],"Figma design",i+5)}).join("");
+</script>
 </body>
 </html>
