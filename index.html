@@ -49,7 +49,7 @@
         <div class="skills">
           <span>Figma</span><span>WordPress</span><span>PHP</span
           ><span>React</span><span>HTML &amp; CSS</span><span>JavaScript</span
-          ><span>Responsive design</span><span>UI/UX</span><span>Workflow Automation & API Integrations</span>
+          ><span>Responsive design</span><span>UI/UX</span>
         </div>
       </section>
 
@@ -59,6 +59,134 @@
         <p>© 2026 Vincent O. Fernandez</p>
       </footer>
     </div>
+    <script>
+      var sites = [
+        ["ThinkCertified", "https://thinkcertified.com/"],
+        ["Rodlocker Blog", "https://blog.rodlocker.com/"],
+        ["Vative", "https://vative.com.au/"],
+        ["Fiddle Contest", "https://www.fiddlecontest.org/"],
+        ["My Condolences PH", "https://mycondolences.ph/"],
+        ["CVPD", "https://cvpd.com.au/"],
+        ["Basileia Discipleship", "https://basileiadiscipleship.com.au/"],
+        ["Illawarra Flyers", "https://illawarraflyers.com.au/"],
+        ["TechInstalls", "https://techinstalls.io/"],
+        ["AF Techs", "https://aftechs.com/"],
+        ["Infinite Event Services", "https://infiniteeventservices.com/"],
+        ["Kaleafa", "https://kaleafa.com/"],
+        ["Story Mag", "https://www.storymag.co/"],
+        ["StorePro", "https://storepronew.flywheelsites.com/"],
+        ["Pascal Satori", "https://pascalsatori.com/"],
+        ["The Little Vineyard", "https://www.thelittlevineyard.com.au/"],
+        ["AX Digital", "https://axdigital.com.au/"],
+        ["Rye Football Club", "https://ryefootballclub.com.au/"],
+        ["Titan Locksmiths", "https://www.titanlocksmiths.com.au/"],
+        ["MOR Healthcare", "https://morhealthcare.com.au/"],
+        ["Market Street Finance", "https://marketstreetfinance.com.au/"],
+        ["Depardo Consulting", "https://www.depardoconsulting.com/"],
+        ["Essendon Hockey", "https://essendonhockey.com.au/"],
+        ["RS Audits", "https://rsaudits.com.au/"],
+        ["Plantation House", "https://plantationhouse.com.au/"],
+        ["Oceanside Roofing", "https://oceansideroofing.com.au/"],
+        ["Mirrool Counselling Centre", "https://mirroolcounsellingcentre.com.au/"],
+        ["Jimmy's", "https://jimmys.org.au/"],
+        ["Kithe", "https://kithe.com.au/"],
+        ["A Squired Square", "https://asquiredsquare.com.au/"],
+        ["Fresh Taste Bakery", "https://freshtastebakery.com/"],
+        ["WLI", "https://wli.nyx.temporary.site/website_a94fde03/"],
+        ["Red Gem", "https://redgem.com.au/"],
+        ["Invsble AI", "https://invsble.ai/"],
+      ];
+      var figma = [
+        [
+          "Advanced Field Technicians",
+          "EDKeY2KbmJ5yh5TvmQOnpM/Advanced-Field-Technicians",
+        ],
+        [
+          "Starlink Installation",
+          "3NIsCOFuETjlZYbTn9RYpc/Starlink-Installation",
+        ],
+        ["Anny Slegten", "BtWjTxmHT7PGjiYMRVoSww/Anny-Slegten"],
+        ["Reiki Training", "5g0LUHTzHZlUqV0OquyXZQ/Reiki-Training"],
+        ["Hypnosis Edmonton", "zqRDmeLPskMCFKnJZ97bKP/Hypnosis-Edmonton"],
+        ["Slegtenian Hypnosis", "flJpBLWX9aUCSQlRbmSr2K/Slegtenian-Hypnosis"],
+        [
+          "Hypnotism Training Institute of Alberta",
+          "w6H8sfoisLJJzmxzLjhXBr/Hypnotism-Training-Institute-of-Alberta",
+        ],
+        ["New Asahi Subic", "j3GC3cwWKByBqsTAHrbzgr/New-Asahi-Subic---Mockup"],
+        [
+          "Somerville Primary",
+          "SNtf3fDesyDqt40mQSxNtn/240105-Somerville-Primary-Web-Concept",
+        ],
+        ["Plantation House", "uKdP3xR1bOIih5FdxPRwKs/240228-Plantation-House"],
+        ["Boulevard", "0GcbUnaEOMV4kqdbHC7ZXY/Boulevard"],
+        ["DevOps Layout", "YFrlHJFEI0GWGkuPN7J1ZG/DevOps-Layout"],
+        ["Farewell Funeral", "qXozF38Xh5nAK7hmcXS7tR/Farewell-Funeral"],
+        [
+          "Torres Strait Kaziw Meta",
+          "voTUJRICLO18HkoSC0fKCn/Torres-Strait-Kaziw-Meta",
+        ],
+        ["Kithe", "yKBLOwGxTpq5jVfyrBF4NW/240215-Kithe"],
+        ["Wheelspin", "HHEhk2b6BYti3yNQ1MD17F/Mockup---Wheelspin--2-"],
+        [
+          "Kingston Grange Bamboo",
+          "ZWkJqcAtmmoEKAcomG7wnu/Kingston-Grange-Bamboo--2-",
+        ],
+        ["Homepage", "2Hz4CGXsYKQ3TharNDoJIW/Homepage"],
+      ];
+      document.getElementById("n1").textContent = sites.length;
+      function esc(s) {
+        return s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+      }
+      function card(t, u, tag, i) {
+        var h = (i * 47 + 215) % 360,
+          ini = t
+            .split(" ")
+            .slice(0, 2)
+            .map(function (w) {
+              return w[0];
+            })
+            .join("")
+            .toUpperCase();
+        return (
+          '<a class="card" href="' +
+          u +
+          '" target="_blank" rel="noopener"><div class="th" style="background:linear-gradient(135deg,hsl(' +
+          h +
+          ",60%,48%),hsl(" +
+          ((h + 40) % 360) +
+          ',65%,38%))">' +
+          ini +
+          '</div><div class="bd"><h3>' +
+          esc(t) +
+          "</h3><p>" +
+          esc(
+            u
+              .replace(/^https?:\/\/(www\.)?/, "")
+              .split("?")[0]
+              .replace(/\/$/, ""),
+          ).slice(0, 60) +
+          '</p><span class="tag">' +
+          tag +
+          "</span></div></a>"
+        );
+      }
+      document.getElementById("sites").innerHTML = sites
+        .map(function (s, i) {
+          return card(s[0], s[1], "Website", i);
+        })
+        .join("");
+      document.getElementById("figma").innerHTML = figma
+        .map(function (s, i) {
+          return card(
+            s[0],
+            "https://www.figma.com/design/" + s[1],
+            "Figma design",
+            i + 5,
+          );
+        })
+        .join("");
+    </script>
     <script src="/script.js" defer></script>
   </body>
 </html>
