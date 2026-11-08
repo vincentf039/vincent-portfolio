@@ -69,6 +69,7 @@ var figma = [
   ],
   ["Homepage", "2Hz4CGXsYKQ3TharNDoJIW/Homepage"],
 ];
+document.getElementById("n1").textContent = sites.length;
 function esc(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 }
