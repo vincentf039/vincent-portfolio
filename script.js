@@ -121,3 +121,37 @@ document.getElementById("figma").innerHTML = figma
     );
   })
   .join("");
+
+/* Scroll-to-top button (self-contained: injects its own CSS + button) */
+(function () {
+  var css =
+    ".to-top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:1px solid var(--bd,#e3e1db);background:var(--tx,#17181c);color:var(--bg,#f7f6f3);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;box-shadow:0 4px 14px rgba(0,0,0,.2);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s,transform .25s,visibility .25s;z-index:50}" +
+    ".to-top.show{opacity:1;visibility:visible;transform:none}" +
+    ".to-top:hover{transform:translateY(-3px)}" +
+    ".to-top:focus-visible{outline:2px solid var(--ac,#3b5bdb);outline-offset:3px}" +
+    ".to-top svg{width:20px;height:20px}";
+  var style = document.createElement("style");
+  style.textContent = css;
+  document.head.appendChild(style);
+
+  var btn = document.createElement("button");
+  btn.className = "to-top";
+  btn.type = "button";
+  btn.setAttribute("aria-label", "Scroll to top");
+  btn.innerHTML =
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  document.body.appendChild(btn);
+
+  function toggle() {
+    btn.classList.toggle("show", window.pageYOffset > 400);
+  }
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle();
+
+  btn.addEventListener("click", function () {
+    var reduce =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  });
+})();
