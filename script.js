@@ -35,41 +35,23 @@ var sites = [
   ["Invsble AI", "https://invsble.ai/"],
 ];
 var figma = [
-  [
-    "Advanced Field Technicians",
-    "EDKeY2KbmJ5yh5TvmQOnpM/Advanced-Field-Technicians",
-  ],
+  ["Boulevard", "YYgKb5qMJED9StX1uZMP2F/Boulevard"],
+  ["Interlinked", "yF4lyesRU3p9wdgm5N76xN/Interlinked"],
+  ["Farewell Funeral", "Q8gsYehoawnPc8gnusy1lX/Farewell-Funeral"],
+  ["Torres Strait Kaziw Meta", "lihW5JbxGJqAi4ZVQ5DNpu/Torress-Strait-Kaziw-Meta"],
+  ["Anny Slegten", "qlDi9oo5eUEy75LHFfGlXl/Anny-Slegten"],
   ["Starlink Installation", "3NIsCOFuETjlZYbTn9RYpc/Starlink-Installation"],
-  ["Anny Slegten", "BtWjTxmHT7PGjiYMRVoSww/Anny-Slegten"],
-  ["Reiki Training", "5g0LUHTzHZlUqV0OquyXZQ/Reiki-Training"],
-  ["Hypnosis Edmonton", "zqRDmeLPskMCFKnJZ97bKP/Hypnosis-Edmonton"],
-  ["Slegtenian Hypnosis", "flJpBLWX9aUCSQlRbmSr2K/Slegtenian-Hypnosis"],
-  [
-    "Hypnotism Training Institute of Alberta",
-    "w6H8sfoisLJJzmxzLjhXBr/Hypnotism-Training-Institute-of-Alberta",
-  ],
-  ["New Asahi Subic", "j3GC3cwWKByBqsTAHrbzgr/New-Asahi-Subic---Mockup"],
-  [
-    "Somerville Primary",
-    "SNtf3fDesyDqt40mQSxNtn/240105-Somerville-Primary-Web-Concept",
-  ],
-  ["Plantation House", "uKdP3xR1bOIih5FdxPRwKs/240228-Plantation-House"],
-  ["Boulevard", "0GcbUnaEOMV4kqdbHC7ZXY/Boulevard"],
-  ["DevOps Layout", "YFrlHJFEI0GWGkuPN7J1ZG/DevOps-Layout"],
-  ["Farewell Funeral", "qXozF38Xh5nAK7hmcXS7tR/Farewell-Funeral"],
-  [
-    "Torres Strait Kaziw Meta",
-    "voTUJRICLO18HkoSC0fKCn/Torres-Strait-Kaziw-Meta",
-  ],
-  ["Kithe", "yKBLOwGxTpq5jVfyrBF4NW/240215-Kithe"],
-  ["Wheelspin", "HHEhk2b6BYti3yNQ1MD17F/Mockup---Wheelspin--2-"],
-  [
-    "Kingston Grange Bamboo",
-    "ZWkJqcAtmmoEKAcomG7wnu/Kingston-Grange-Bamboo--2-",
-  ],
-  ["Homepage", "2Hz4CGXsYKQ3TharNDoJIW/Homepage"],
+  ["Advanced Field Technicians", "QhU1KRIU7FJ0oqUa97Ikb7/Advanced-Field-Technicians"],
+  ["Condolence PH", "eROwDFAZoEsjp8vOm81oo7/Copy---Condolence-PH?node-id=0-1"],
+  ["Kingston Grange Bamboo", "ZWkJqcAtmmoEKAcomG7wnu/Kingston-Grange-Bamboo?node-id=0-1"],
+  ["Kithe", "yKBLOwGxTpq5jVfyrBF4NW/240215-Kithe?node-id=0-1"],
+  ["Impact", "fgp15X3wM5XHUINsgCXqMY/Impact?node-id=0-1"],
+  ["Somerville Primary", "SNtf3fDesyDqt40mQSxNtn/240105-Somerville-Primary-Web-Concept"],
+  ["Plantation House", "uKdP3xR1bOIih5FdxPRwKs/240228-Plantation-House?node-id=22-1249"],
+  ["Magnetic Island", "Qf1kLMsvXOF3xfg6Q6wNKq/Magnetic-Island?node-id=0-1"],
 ];
 document.getElementById("n1").textContent = sites.length;
+document.getElementById("n2").textContent = figma.length;
 function esc(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 }
